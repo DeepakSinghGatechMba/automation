@@ -73,8 +73,8 @@ for(i in 1:nrow(SiteList))
 View(SiteList)
 
 wb = createWorkbook()
-addWorksheet(wb, "StoreDetails") 
-writeData(wb, sheet = "StoreDetails", SiteList) # Will default add from cell A1 
+addWorksheet(wb, "SearchLocation") 
+writeData(wb, sheet = "SearchLocation", SiteList) # Will default add from cell A1 
 date=unlist(strsplit(as.character.Date(Sys.time()),":"))
-saveWorkbook(wb,paste(CustomerName,"_StoreDetails",paste(date[1],"_",date[2],sep=""),".xlsx",sep = ""),overwrite = T) 
+saveWorkbook(wb,paste(CustomerName,"_SearchLocation",paste(date[1],"_",date[2],sep=""),".xlsx",sep = ""),overwrite = T) 
 
